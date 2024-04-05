@@ -21,8 +21,8 @@ const App = () => {
     });
   };
   return (
-    <>
-      <main className="bg-[#f3fafd] p-8 min-h-[calc(100vh-56px)] w-full h-full flex flex-col gap-6 items-center justify-center">
+    <main className="p-4">
+      <section className="bg-[#f3fafd] p-8 min-h-[calc(100vh-56px)] w-full h-full flex flex-col gap-6 items-center justify-center">
         <div className="flex items-center justify-center flex-col">
           <h1 className="font-semibold">
             <code> Re-created animated Snow Monkey login page</code>
@@ -160,7 +160,7 @@ const App = () => {
           </span>
         </a>
       </section>
-    </>
+    <main/>
   );
 };
 
