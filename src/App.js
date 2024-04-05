@@ -1,6 +1,6 @@
 import React from "react";
 import images from "./images"; // Importing the object of image paths
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 const App = () => {
   const [inputValue, setInputValue] = useState("");
   const [password, setPassword] = useState("");
@@ -9,6 +9,17 @@ const App = () => {
   const [passwordFocus, setPasswordFocus] = useState(false);
   const passwordInputRef = useRef("");
   // console.log(inputValue.length);
+  useEffect(() => {
+    // Preload images when component mounts
+    preloadImages();
+  }, []); // Empty dependency array ensures it runs only once on mount
+
+  const preloadImages = () => {
+    Object.values(images).forEach((imageUrl) => {
+      const img = new Image();
+      img.src = imageUrl;
+    });
+  };
   return (
     <>
       <main className="bg-[#f3fafd] p-8 min-h-[calc(100vh-56px)] w-full h-full flex flex-col gap-6 items-center justify-center">
@@ -29,7 +40,7 @@ const App = () => {
             setPassword("");
             e.target.reset();
           }}
-          className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0 transition-all md:duration-200 ease-out"
+          className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0"
         >
           <div className="flex items-center justify-center pt-8 transition-all md:duration-200 ease-out">
             <img
@@ -45,7 +56,8 @@ const App = () => {
                   : images.noFocus
               }
               alt="Snow Monkey"
-              className=""
+              loading="eager"
+              className="transition-all md:duration-200 ease-out"
             />
           </div>
           <div className="group relative w-full p-4 text-2xl transition-all md:duration-200 ease-out">
