@@ -21,13 +21,13 @@ const App = () => {
     });
   };
   return (
-    <main className="p-4">
+    <main>
       <section className="bg-[#f3fafd] p-8 min-h-[calc(100vh-56px)] w-full h-full flex flex-col gap-6 items-center justify-center">
         <div className="flex items-center justify-center flex-col">
-          <h1 className="font-semibold">
+          <h1 className="font-semibold text-xs">
             <code> Re-created animated Snow Monkey login page</code>
           </h1>
-          <h3>
+          <h3 className="text-xs">
             <code>with</code>
             &nbsp; &nbsp;
             <strong>React JS</strong> & <strong>Tailwind CSS</strong>
@@ -40,7 +40,7 @@ const App = () => {
             setPassword("");
             e.target.reset();
           }}
-          className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0"
+          className="m-2 w-[22.5rem] md:w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0"
         >
           <div className="flex items-center justify-center pt-8 transition-all md:duration-200 ease-out">
             <img
@@ -98,9 +98,20 @@ const App = () => {
                   className="cursor-pointer"
                   onChange={(e) => {
                     setShowPassword(e.target.checked);
-const valueLength=inputRef.current.value.length;
-    inputRef.current.setSelectionRange(valueLength, valueLength);                         
-// passwordInputRef.current.focus();
+                    // Focus on the input field
+                    passwordInputRef.current.focus();
+
+                    // Focus on the input field
+                    passwordInputRef.current.focus();
+
+                    // Set the cursor position after a brief timeout
+                    setTimeout(() => {
+                      const input = passwordInputRef.current;
+                      input.setSelectionRange(
+                        input.value.length,
+                        input.value.length
+                      );
+                    }, 0);
                   }}
                 />
                 <label
@@ -133,7 +144,7 @@ const valueLength=inputRef.current.value.length;
             </button>
           </div>
         </form>
-      </main>
+      </section>
 
       <section className="px-2 py-4 md:px-4 flex items-center justify-between gap-2.5 text-[#16181d] w-full text-xs md:text-base">
         <a
@@ -162,7 +173,7 @@ const valueLength=inputRef.current.value.length;
           </span>
         </a>
       </section>
-    <main/>
+    </main>
   );
 };
 
