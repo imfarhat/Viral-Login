@@ -98,7 +98,9 @@ const App = () => {
                   className="cursor-pointer"
                   onChange={(e) => {
                     setShowPassword(e.target.checked);
-                    passwordInputRef.current.focus();
+const valueLength=inputRef.current.value.length;
+    inputRef.current.setSelectionRange(valueLength, valueLength);                         
+// passwordInputRef.current.focus();
                   }}
                 />
                 <label
