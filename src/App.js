@@ -14,10 +14,10 @@ const App = () => {
       <main className="bg-[#f3fafd] p-8 min-h-[calc(100vh-56px)] w-full h-full flex flex-col gap-6 items-center justify-center">
         <div className="flex items-center justify-center flex-col">
           <h1 className="font-semibold">
-            Re-creating animated Snow Monkey login page
+            <code> Re-created animated Snow Monkey login page</code>
           </h1>
           <h3>
-            <em>with</em>
+            <code>with</code>
             &nbsp; &nbsp;
             <strong>React JS</strong> & <strong>Tailwind CSS</strong>
           </h3>
@@ -31,7 +31,7 @@ const App = () => {
           }}
           className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0 transition-all md:duration-500 ease-out"
         >
-          <div className="pt-8 transition-all md:duration-500 ease-out">
+          <div className="flex items-center justify-center pt-8 transition-all md:duration-500 ease-out">
             <img
               src={
                 inputFocus
@@ -45,9 +45,10 @@ const App = () => {
                   : images.noFocus
               }
               alt="Snow Monkey"
+              className=""
             />
           </div>
-          <div className="group relative w-full p-4 text-2xl transition md:duration-500 ease-out">
+          <div className="group relative w-full p-4 text-2xl transition-all md:duration-500 ease-out">
             <label htmlFor="email" className="font-bold text-xl text-[#217093]">
               Email
             </label>
@@ -59,11 +60,11 @@ const App = () => {
               value={inputValue}
               onFocus={() => setInputFocus(true)}
               onBlur={() => setInputFocus(false)}
-              className="w-full px-4 pt-6 pb-2 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition md:duration-500 ease-out font-semibold text-[#aadef2]"
+              className="w-full px-4 pt-6 pb-2 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-500 ease-out font-semibold bg-[#aadef2]/20"
             />
             <label
               htmlFor="email"
-              className={`absolute bottom-9 left-8 opacity-75 group-has-[input:focus]:bottom-[3.75rem] text-[#237191] group-has-[input:focus]:text-base group-has-[input:focus]:opacity-100 transition md:duration-500 ease-out select-none ${
+              className={`absolute bottom-9 left-8 opacity-55 group-has-[input:focus]:bottom-[3.75rem] text-[#237191] group-has-[input:focus]:text-base group-has-[input:focus]:opacity-100 transition-all md:duration-200 ease-out select-none ${
                 inputValue ? "bottom-[3.75rem] text-base" : ""
               }`}
             >
@@ -71,7 +72,7 @@ const App = () => {
             </label>
           </div>
 
-          <div className="w-full p-4 text-2xl transition md:duration-500 ease-out">
+          <div className="w-full p-4 text-2xl transition-all md:duration-500 ease-out">
             <label
               htmlFor="pass"
               className="font-bold text-xl flex items-center justify-between text-[#217093]"
@@ -105,14 +106,14 @@ const App = () => {
               value={password}
               onFocus={() => setPasswordFocus(true)}
               onBlur={() => setPasswordFocus(false)}
-              className="w-full p-4 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition md:duration-500 ease-out font-semibold text-black"
+              className="w-full p-4 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-500 ease-out font-semibold text-black bg-[#aadef2]/20"
             />
           </div>
 
           <div className="w-full p-4">
             <button
               type="submit"
-              className="bg-[#4eb8dd] hover:bg-[#237191] p-4 w-full font-semibold text-2xl text-white rounded transition md:duration-500 ease-out"
+              className="bg-[#4eb8dd] hover:bg-[#237191] p-4 w-full font-semibold text-2xl text-white rounded transition-all md:duration-500 ease-out"
             >
               Log in
             </button>
@@ -125,6 +126,7 @@ const App = () => {
           className="flex gap-1 md:gap-1.5"
           href="https://farhat.vercel.app"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <span>©</span> <span>2024</span>
           <span>I. Farhat</span>
