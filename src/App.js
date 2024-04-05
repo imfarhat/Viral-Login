@@ -29,9 +29,9 @@ const App = () => {
             setPassword("");
             e.target.reset();
           }}
-          className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0 transition-all md:duration-500 ease-out"
+          className="w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0 transition-all md:duration-200 ease-out"
         >
-          <div className="flex items-center justify-center pt-8 transition-all md:duration-500 ease-out">
+          <div className="flex items-center justify-center pt-8 transition-all md:duration-200 ease-out">
             <img
               src={
                 inputFocus
@@ -48,7 +48,7 @@ const App = () => {
               className=""
             />
           </div>
-          <div className="group relative w-full p-4 text-2xl transition-all md:duration-500 ease-out">
+          <div className="group relative w-full p-4 text-2xl transition-all md:duration-200 ease-out">
             <label htmlFor="email" className="font-bold text-xl text-[#217093]">
               Email
             </label>
@@ -60,7 +60,7 @@ const App = () => {
               value={inputValue}
               onFocus={() => setInputFocus(true)}
               onBlur={() => setInputFocus(false)}
-              className="w-full px-4 pt-6 pb-2 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-500 ease-out font-semibold bg-[#aadef2]/20"
+              className="w-full px-4 pt-6 pb-2 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-200 ease-out font-semibold bg-[#aadef2]/20"
             />
             <label
               htmlFor="email"
@@ -72,7 +72,7 @@ const App = () => {
             </label>
           </div>
 
-          <div className="w-full p-4 text-2xl transition-all md:duration-500 ease-out">
+          <div className="w-full p-4 text-2xl transition-all md:duration-200 ease-out">
             <label
               htmlFor="pass"
               className="font-bold text-xl flex items-center justify-between text-[#217093]"
@@ -106,14 +106,14 @@ const App = () => {
               value={password}
               onFocus={() => setPasswordFocus(true)}
               onBlur={() => setPasswordFocus(false)}
-              className="w-full p-4 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-500 ease-out font-semibold text-black bg-[#aadef2]/20"
+              className="w-full p-4 border-2 outline-2 focus:outline-[#aadef2] border-[#237191] rounded transition-all md:duration-200 ease-out font-semibold text-black bg-[#aadef2]/20"
             />
           </div>
 
           <div className="w-full p-4">
             <button
               type="submit"
-              className="bg-[#4eb8dd] hover:bg-[#237191] p-4 w-full font-semibold text-2xl text-white rounded transition-all md:duration-500 ease-out"
+              className="bg-[#4eb8dd] hover:bg-[#237191] p-4 w-full font-semibold text-2xl text-white rounded transition-all md:duration-200 ease-out"
             >
               Log in
             </button>
