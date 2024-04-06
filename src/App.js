@@ -79,7 +79,7 @@ const App = () => {
             />
             <label
               htmlFor="email"
-              className={`absolute bottom-9 left-8 opacity-55 group-has-[input:focus]:bottom-[3.75rem] text-[#237191] group-has-[input:focus]:text-base group-has-[input:focus]:opacity-100 transition-all md:duration-200 ease-out select-none ${
+              className={`absolute bottom-9 left-8 opacity-55 group-has-[input:focus]:bottom-[3.75rem] text-[#237191] group-has-[input:focus]:text-base group-has-[input:focus]:opacity-100 transition-all md:duration-200 ease-out select-none cursor-text ${
                 inputValue ? "bottom-[3.75rem] text-base" : ""
               }`}
             >
