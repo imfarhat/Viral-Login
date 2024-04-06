@@ -43,22 +43,24 @@ const App = () => {
           className="m-2 w-[22.5rem] md:w-[25rem] bg-white rounded-md shadow p-4 flex flex-col items-center justify-center gap-0"
         >
           <div className="flex items-center justify-center pt-8 transition-all md:duration-200 ease-out">
-            <img
-              src={
-                inputFocus
-                  ? inputValue.length <= 21
-                    ? images[`length${inputValue.length}`]
-                    : images.length21
-                  : passwordFocus
-                  ? showPassword
-                    ? images.text
-                    : images.password
-                  : images.noFocus
-              }
-              alt="Snow Monkey"
-              loading="eager"
-              className="transition-all md:duration-200 ease-out"
-            />
+            <div className="aspect-square rounded-full h-[12.5rem] bg-[#abdff1] transition-all md:duration-200 ease-out">
+              <img
+                src={
+                  inputFocus
+                    ? inputValue.length <= 21
+                      ? images[`length${inputValue.length}`]
+                      : images.length21
+                    : passwordFocus
+                    ? showPassword
+                      ? images.text
+                      : images.password
+                    : images.noFocus
+                }
+                alt="Snow Monkey"
+                loading="eager"
+                className="transition-all md:duration-200 ease-out aspect-square rounded-full h-[12.5rem]"
+              />
+            </div>
           </div>
           <div className="group relative w-full p-4 text-2xl transition-all md:duration-200 ease-out">
             <label htmlFor="email" className="font-bold text-xl text-[#217093]">
@@ -68,6 +70,7 @@ const App = () => {
               type="email"
               name="email"
               id="email"
+              autoComplete="off"
               onChange={(e) => setInputValue(e.target.value)}
               value={inputValue}
               onFocus={() => setInputFocus(true)}
